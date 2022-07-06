@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "146387481653",
+    "project_id": "mis-articulos-1bbcb",
+    "storage_bucket": "mis-articulos-1bbcb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146387481653:android:b0014de46ccecb6455ed7c",
+        "android_client_info": {
+          "package_name": "com.example.misarticulos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146387481653-b8fnm6ful5nd82n6liemjquftk3vonfe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.misarticulos",
+            "certificate_hash": "0abf7570f711ff8ff4ecf27b50fe3c7fc401b764"
+          }
+        },
+        {
+          "client_id": "146387481653-1ll3nnll7coqsso2110iifcn4qa4shnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdV3QBX633S6bWlNdVHkSulYvXgQdlCEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146387481653-1ll3nnll7coqsso2110iifcn4qa4shnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
