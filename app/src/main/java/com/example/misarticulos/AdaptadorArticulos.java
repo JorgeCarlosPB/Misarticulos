@@ -5,17 +5,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.android.volley.toolbox.NetworkImageView;
 
 import java.util.List;
 
-public class AdaptadorLibro extends RecyclerView.Adapter<AdaptadorLibro.ViewHolder>{
+public class AdaptadorArticulos extends RecyclerView.Adapter<AdaptadorArticulos.ViewHolder> {
     private LayoutInflater inflador; //Crea Layouts a partir del XML protecte
-    private List<Libros> lista;
+    private List<String> lista;
     private Context contexto;
 
 
-    public AdaptadorLibro(Context contexto, List<Libros> listaLibros) {
+    public AdaptadorArticulos(Context contexto, List<String> listaLibros) {
         inflador = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.lista = listaLibros;
         this.contexto = contexto;
@@ -24,12 +27,14 @@ public class AdaptadorLibro extends RecyclerView.Adapter<AdaptadorLibro.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView nombre, detalle;
         public TextView costo;
+        public NetworkImageView icon;
 
         ViewHolder(View itemView) {
             super(itemView);
             nombre = (TextView) itemView.findViewById(R.id.nombre);
             detalle = (TextView) itemView.findViewById(R.id.detalle);
             costo = (TextView) itemView.findViewById(R.id.costo);
+            icon = (NetworkImageView) itemView.findViewById(R.id.icono);
         }
     }
 
@@ -43,10 +48,11 @@ public class AdaptadorLibro extends RecyclerView.Adapter<AdaptadorLibro.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, int i) {
 
-        Libros items = lista.get(i);
-        holder.nombre.setText(items.getNombre());
-        holder.detalle.setText(items.getDescripcion());
-        holder.costo.setText(items.getCosto());
+        String[] items = lista.get(i).split(",");
+        holder.nombre.setText(items[0]);
+        holder.detalle.setText(items[1]);
+        holder.costo.setText(items[2]);
+        holder.icon.setImageUrl("https://franz.usfx.bo/nube/"+items[3], BaseDatosActivity.lectorImagenes);
     }
 
 

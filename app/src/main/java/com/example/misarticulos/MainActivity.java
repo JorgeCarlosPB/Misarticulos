@@ -1,24 +1,17 @@
 package com.example.misarticulos;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -55,13 +48,13 @@ public class MainActivity extends AppCompatActivity {
     escribirBD.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            FirebaseDatabase database = FirebaseDatabase.getInstance("https://mis-articulos-1bbcb-default-rtdb.firebaseio.com/");
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("mensaje");
             myRef.setValue("Hola mundo");
             }
     });
 
-    Button baseDatos = findViewById(R.id.btn_baseDatos);
+    /*Button baseDatos = findViewById(R.id.btn_baseDatos);
         baseDatos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -77,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
                 });
             }
-        });
+        });*/
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("mensaje");
@@ -94,6 +87,16 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
+    Button show_db = (Button) findViewById(R.id.btn_base_datos);
+    show_db.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            lanzarLecturaDatos();
+        }
+    });
+
+
+
     Button datosUsuario = (Button) findViewById(R.id.btn_datos_usuario);
     datosUsuario.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -107,6 +110,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void lanzarDatosUsuario(){
         Intent i = new Intent(this, UsuarioActivity.class);
+        startActivity(i);
+    }
+
+    public void lanzarLecturaDatos(){
+        Intent i = new Intent(this, BaseDatosActivity.class);
         startActivity(i);
     }
 }

@@ -1,17 +1,16 @@
 package com.example.misarticulos;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Libros {
+public class Articulos {
     private String nombre;
     private String descripcion;
     private String costo;
+    private String imagen;
 
-    public Libros(String nombre, String descripcion, String costo) {
+    public Articulos(String nombre, String descripcion, String costo) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.costo = costo;
+        this.imagen = imagen;
 
     }
 
@@ -39,12 +38,6 @@ public class Libros {
         this.costo = costo;
     }
 
-    public static List<Libros> ejemploLibros(){
-        List<Libros> listaLibros = new ArrayList<>();
-        listaLibros.add(new Libros("Camisa","Camisa a rayas de color azul","100Bs"));
-        listaLibros.add(new Libros("Zapatos","Zapatos de cuero color marrón","250Bs"));
-        listaLibros.add(new Libros("Pantalones","Pantalones jeans color azul","150Bs"));
-        return listaLibros;
-    }
+    public String getImagen() {return imagen;}
 
 }

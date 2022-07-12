@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/2020/.gradle/caches/transforms-3/f5ef7af07f6f1d6e330c0b04f71ea4d8/transformed/facebook-share-4.42.0/res/drawable/com_facebook_button_send_background.xml" value="0.124" />
-        <entry key="..\:/Users/2020/AndroidStudioProjects/Misarticulos/app/src/main/res/layout/activity_base_datos.xml" value="0.2" />
+        <entry key="..\:/Users/2020/AndroidStudioProjects/Misarticulos/app/src/main/res/layout/activity_base_datos.xml" value="0.1" />
         <entry key="..\:/Users/2020/AndroidStudioProjects/Misarticulos/app/src/main/res/layout/activity_login.xml" value="0.25317028985507245" />
         <entry key="..\:/Users/2020/AndroidStudioProjects/Misarticulos/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/2020/AndroidStudioProjects/Misarticulos/app/src/main/res/layout/activity_s.xml" value="0.25416666666666665" />
@@ -12,7 +12,7 @@
         <entry key="..\:/Users/2020/AndroidStudioProjects/Misarticulos/app/src/main/res/layout/elemento_lista.xml" value="0.1" />
         <entry key="..\:/Users/2020/AndroidStudioProjects/Misarticulos/app/src/main/res/layout/fragment_first.xml" value="0.264" />
         <entry key="..\:/Users/2020/AndroidStudioProjects/Misarticulos/app/src/main/res/layout/fragment_second.xml" value="0.28125" />
-        <entry key="..\:/Users/2020/AndroidStudioProjects/Misarticulos/app/src/main/res/layout/fragment_usuario.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/2020/AndroidStudioProjects/Misarticulos/app/src/main/res/layout/fragment_usuario.xml" value="0.4" />
         <entry key="..\:/Users/2020/AndroidStudioProjects/Misarticulos/app/src/main/res/layout/prueba.xml" value="0.1796875" />
       </map>
     </option>

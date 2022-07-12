@@ -3,18 +3,11 @@
     package="com.example.misarticulos">
 
     <application
-        android:name=".Aplicacion"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.MisArticulos">
-        <activity
-            android:name=".ElementoLista"
-            android:exported="true"/>
-        <activity
-            android:name=".BaseDatosLibros"
-            android:exported="false" />
 
         <activity
             android:name=".LoginActivity"
@@ -25,10 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+
+        <activity
+            android:name=".MainActivity">
+        </activity>
+
         <activity
             android:name=".UsuarioActivity"
             android:label="Información sobre el usuario" />
+
+        <activity
+            android:name=".BaseDatosActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
